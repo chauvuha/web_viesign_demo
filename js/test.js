@@ -105,9 +105,9 @@ function optionSelected(answer) {
 
     if (userAns == correcAns) {
         if (option_list.innerHTML.indexOf("understand") !== -1) {
-            userScore += 1;
+            userScore += 2.5;
         } else {
-            userScore += 20;
+            userScore += 10;
         }
         answer.classList.add("correct");
         answer.insertAdjacentHTML("beforeend", tickIconTag);
