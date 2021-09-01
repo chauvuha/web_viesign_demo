@@ -1,6 +1,10 @@
 .footer {
+  /* margin-top: 200px !important; */
+  /* position: absolute; */
+  width: 100%;
+  /* bottom: 0px; */
   padding: 30px;
-  background-color: rgb(107, 147, 187);
+  background-color: #00599c;
   margin-top: 2px;
 }
 
@@ -39,9 +43,12 @@
     margin-top: 10px;
     text-align: center;
   }
-  .col img {
-    margin-top: 20%;
+ .card-body{
+    margin-top: 30%;
     border-top: 1px solid rgba(0, 0, 0);
+  }
+  .col #img2{
+    margin-top:20%;
   }
 }
 

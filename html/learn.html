@@ -1,24 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn</title>
+    <link rel="stylesheet" href="../vendor/bootstrapmin5.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/learn.css">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="{{url_for('static', filename='about.css')}}">
-        <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
-    <title> About</title>
+    <link rel="shortcut icon" href="../images/favicon.ico">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark py-3" id="my-nav">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" id="my-title" href="/">VieSign</a>
+            <a class="navbar-brand fw-bold" id="my-title" href="../index.html">VieSign</a>
             <button class="navbar-toggler freelancer__navbar__button cl-white" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -28,38 +27,55 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li id="a" class="nav-item">
-                        <a class="menu__a nav-link mr-20 cl-white" aria-current="page" href="/about"
+                        <a class="menu__a nav-link mr-20 cl-darkblue" aria-current="page" href="../html/about.html"
                             class="about_us">About us</a>
                     </li>
                     <li id="b" class="nav-item">
-                        <a class=" menu__a nav-link mr-20 cl-white" href="/learn" class="Learn">Learn</a>
+                        <a class=" menu__a nav-link mr-20 cl-darkblue active" href="../html/learn.html"
+                            class="Learn">Learn</a>
                     </li>
                     <!-- <li id="c" class="nav-item">
-                        <a class=" menu__a nav-link mr-20 cl-white"  target="_blank" href="https://sign-language-detection.vercel.app/"
+                        <a class=" menu__a nav-link mr-20 cl-darkblue" target="_blank" href="https://viesign.vercel.app/"
                             class="communicate">Communicate</a>
                     </li> -->
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="box_main">
+        <div class="box_left ta-center">
+            <div class="box_left_level ta-center">
+                <!-- <h2> Học cùng bộ Flashcard </h2> -->
+                <button class="button_learn_intro button_level cl-white"> <a href="./learn.html">Bài 1</button></a>
+                <button class="button_learn_intro button_level cl-white"> <a href="./learn.html">Bài 2</button></a>
+                <button class="button_learn_intro button_level cl-white"> <a href="./learn.html">Bài 3</button></a>
+            </div>
+        </div>
+        <div class="box_center ta-center ta-center d-flex-column">
+            <button disabled class="box_center_part_title cl-darkblue"> <a href="#">Chủ đề <br> <h2>Cảm xúc</h2>  </button></a>
+            <button class="box_center_part cl-darkblue"> <a href="./test.html"><h3>Phần 1: Từ mới</h3></button></a>
+            <button class="box_center_part cl-darkblue"> <a href="./test.html"><h3>Phần 2: Từ mới</h3></button></a>
+            <button class="box_center_part cl-darkblue"> <a href="./test.html"><h3>Phần 3: Từ mới</h3></button></a>
+            <button class="box_center_part cl-darkblue"> <a href="./test.html"><h3>Phần 4: Từ mới</h3></button></a>
+            <button class="box_center_part cl-darkblue"> <a href="./test.html"><h3>Phần 5: Từ mới</h3></button></a>
+            <!-- <button class="box_center_part cl-darkblue"> <a href="./test.html">Phần 1: Từ mới</button></a> -->
 
-    <div class="main_bottom">
-        <div class="main_com">
-            <img src="{{url_for('static', filename='images/about1.png')}}" class="card-img-top" alt="img">
-            <h4>{{ n }}</h4>
+        </div>
+        <div class="box_right ta-center ta-center">
+            <div class="box_bottom_text ta-center">
+                <h2> Bảng xếp hạng </h2>
+                <button class="button_learn_intro cl-white"> <a href="./test.html">Bảng xếp hạng</button></a>
+            </div>
         </div>
     </div>
-
-
-
     <footer class="footer">
         <div>
             <div class="row">
                 <div class="col-sm-5 col-md-6">
-                    <h1 class="footerText">Contact Us Now</h1>
+                    <h1 class="footerText">Liên hệ với chúng tôi</h1>
                     <div class="linkcontact">
                         <a href="https://www.facebook.com/profile.php?id=100008312435506"><button type="button"
-                                class="btn btn-light " ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                class="btn btn-light "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                                     <path
                                         d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
@@ -82,20 +98,20 @@
                 <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0" id="formcontact">
                     <script>
                         function submitForm() {
-                            return confirm('Sent !!!');
+                            return confirm('Đã gửi !!!');
                         }
                     </script>
                     <form onsubmit="return submitForm(this);">
                         <div class="mb-3">
                             <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Email address" required>
+                                placeholder="Địa chỉ Email của bạn" required>
                         </div>
                         <div class="mb-3">
                             <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                placeholder="Your message" required></textarea>
+                                placeholder="Lời nhắn của bạn" required></textarea>
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-light" type="submit" id="btnsend">Send</button>
+                            <button class="btn btn-light" type="submit" id="btnsend">Gửi</button>
                         </div>
                     </form>
                 </div>
@@ -103,13 +119,8 @@
         </div>
 
     </footer>
+    <script src="../vendor/bootstrap5min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

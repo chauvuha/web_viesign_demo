@@ -1,14 +1,49 @@
+
+.main_test {
+    position: relative;
+    top: 10px;
+    padding-bottom: 200px !important;
+    margin-bottom: 200px !important;
+    height: 100%;
+    /* bottom: 200px; */
+    /* height: 1000px;; */
+    /* margin-bottom: 200px; */
+}
+
 .start_btn,
 .info_box,
-.quiz_box,
+/* .quiz_box, */
 .result_box{
     position: absolute;
-    top: 50%;
+    top: 300px;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
                 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.info_list {
+    min-height: 400px;
+}
+
+.test_footer {
+    padding-bottom: 200px !important;
+    border-top: 0px;
+    border-bottom: 0px !important;
+    padding-bottom: 200px;
+
+}
+
+.quiz_box {
+    margin-top: 200px !important;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 .info_box.activeInfo,
 .quiz_box.activeQuiz,
 .result_box.activeResult{
@@ -16,6 +51,7 @@
     z-index: 5;
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
+
 }
 .start_btn button{
     font-size: 25px;
@@ -49,7 +85,8 @@
     font-weight: 600;
 }
 .info_box .info-list{
-    padding: 15px 30px;
+    padding: 14px 30px;
+    min-height: 200px
 }
 .info_box .info-list .info{
     margin: 5px 0;
@@ -70,7 +107,7 @@
 .info_box .buttons button{
     margin: 0 5px;
     height: 40px;
-    width: 100px;
+    width: 98px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
@@ -80,7 +117,8 @@
     transition: all 0.3s ease;
 }
 .quiz_box{
-    width: 550px;
+    width: 700px;
+    height: 500px;
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -109,8 +147,11 @@
 }
 
 section{
-    padding: 25px 30px 20px 30px;
+    padding: 25px 30px 50px 30px;
     background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 560px;
 }
 section .que_text{
     font-size: 25px;
@@ -121,35 +162,30 @@ section .option_list{
     display: block;   
 }
 section .option_list .option{
-    background: aliceblue;
     border: 1px solid rgb(107, 147, 187);
+    background: rgb(180, 201, 219);
     border-radius: 5px;
-    padding: 8px 15px;
-    font-size: 17px;
+    padding: 6px 12px;
+    font-size: 16px;
     margin-bottom: 15px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-section .option_list .option:last-child{
-    margin-bottom: 0px;
-}
+
 section .option_list .option:hover{
     color: #004085;
     background: rgb(107, 147, 187);
-    border: 1px solid rgb(107, 147, 187);
 }
 section .option_list .option.correct{
     color: #155724;
     background: #d4edda;
-    border: 1px solid #c3e6cb;
 }
 section .option_list .option.incorrect{
     color: #721c24;
     background: #f8d7da;
-    border: 1px solid #f5c6cb;
 }
 section .option_list .option.disabled{
     pointer-events: none;
@@ -177,15 +213,16 @@ section .option_list .option .icon{
 }
 .test_footer{
     height: 60px;
-    padding: 0 30px;
+    padding: 20 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid lightgrey;
+    border-top: 2px solid rgb(160, 159, 159);
 }
 .test_footer .total_que span{
     display: flex;
     user-select: none;
+    padding: 0px 0px 50px 30px;
 }
 .test_footer .total_que span p{
     font-weight: 500;
@@ -194,7 +231,10 @@ section .option_list .option .icon{
 .test_footer .total_que span p:first-child{
     padding-left: 0px;
 }
-.test_footer button{
+.button button {
+    position:absolute;
+    right: 30px;
+    bottom: -120px;
     height: 40px;
     padding: 0 13px;
     font-size: 18px;
@@ -202,9 +242,9 @@ section .option_list .option .icon{
     cursor: pointer;
     border: none;
     outline: none;
-    color: #fff;
+    color: white;
     border-radius: 5px;
-    background: rgb(107, 147, 187);
+    background: rgb(82, 89, 95);
     border: 1px solid rgb(107, 147, 187);
     line-height: 10px;
     opacity: 0;
@@ -212,16 +252,16 @@ section .option_list .option .icon{
     transform: scale(0.95);
     transition: all 0.3s ease;
 }
-.test_footer button:hover{
+.button button:hover{
     background: rgb(107, 147, 187);
 }
-.test_footer button.show{
+.button button.show{
     opacity: 1;
     pointer-events: auto;
     transform: scale(1);
 }
 .result_box{
-    background: #fff;
+    background: white;
     border-radius: 5px;
     display: flex;
     padding: 25px 30px;
@@ -237,7 +277,7 @@ section .option_list .option .icon{
 .result_box .icon{
     font-size: 100px;
     color: rgb(107, 147, 187);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 .result_box .complete_text{
     font-size: 20px;
@@ -246,8 +286,8 @@ section .option_list .option .icon{
 .result_box .score_text span{
     display: flex;
     margin: 10px 0;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 19px;
+    font-weight: 400;
 }
 .result_box .score_text span p{
     padding: 0 4px;
@@ -284,4 +324,17 @@ section .option_list .option .icon{
 .buttons button.quit:hover{
     color: #fff;
     background: rgb(107, 147, 187);
+}
+
+.que_picture {
+    text-align: center;
+}
+
+@media (max-width: 768px) { 
+    .info_box,
+    .quiz_box,
+    .result_box{
+        margin-top: 20px;
+        width: 310px !important;
+    }
 }

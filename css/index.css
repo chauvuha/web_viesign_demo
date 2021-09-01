@@ -1,15 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 * {
     text-decoration: none !important;
     text-decoration-color: none !important;
+    font-family: 'Roboto', sans-serif;
 }
 
+.d-flex {  
+    display: flex;
+}
+
+.d-flex-column {
+    display: flex;
+    flex-direction: column
+}
+
+
+.cl-darkblue {
+    color: #00599c !important;
+}
 .navbar {
     position: fixed;
     z-index: 100;
     width: 100%;
     padding: 40px;
-    background-color: rgb(107, 147, 187);
+    background-color: white;
 }
+
+/* .logo {
+    height: 40px;
+} */
 
 .fw-bold {
     font-weight: bold;
@@ -33,16 +53,17 @@
 
 .navbar-brand,
 .active {
-    background-color: white;
+    background-color: #00599c;
     border-radius: 5px;
-    color: rgb(78, 118, 158) !important;
+    /* color: rgb(78, 118, 158) !important; */
+    color: white !important;
     padding: 6px 12px;
 }
 
 .menu__a:hover {
-    background-color: white;
+    background-color: #00599c;
     border-radius: 5px;
-    color: rgb(78, 118, 158) !important;
+    color: white !important;
 }
 
 .main_top,
@@ -112,7 +133,7 @@
     border: none;
     border-radius: 5px;
     padding: 8px 12px;
-    background-color: rgb(107, 147, 187);
+    background-color: #00599c;
     font-weight: bold;
     margin-top: 40px;
     color: white;
@@ -241,6 +262,10 @@ a:hover {
     .menu__a:hover {
         background-color: rgb(107, 147, 187) !important;
         color: white !important; 
+    }
+
+    .info_box{
+        width: 270px;
     }
 }
 

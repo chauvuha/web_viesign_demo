@@ -3,18 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='/vendor/bootstrapmin5.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='about.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+    <title>VieSign Test</title>
+    <link rel="stylesheet" href="../css/test.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="../vendor/bootstrapmin5.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/test.css">
+    <link rel="shortcut icon" href="../images/favicon.ico">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark py-3" id="my-nav">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold" id="my-title" href="/">VieSign</a>
+            <a class="navbar-brand fw-bold" id="my-title" href="../index.html">VieSign</a>
             <button class="navbar-toggler freelancer__navbar__button cl-white" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -24,35 +27,75 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li id="a" class="nav-item">
-                        <a class="menu__a nav-link mr-20 cl-white" aria-current="page" href="/about"
+                        <a class="menu__a nav-link mr-20 cl-darkblue" aria-current="page" href="../html/about.html"
                             class="about_us">About us</a>
                     </li>
                     <li id="b" class="nav-item">
-                        <a class=" menu__a nav-link mr-20 cl-white active" href="/learn" class="Learn">Learn</a>
+                        <a class=" menu__a nav-link mr-20 cl-darkblue active" href="../html/learn.html"
+                            class="Learn">Learn</a>
                     </li>
                     <li id="c" class="nav-item">
-                        <a class=" menu__a nav-link mr-20 cl-white"  target="_blank" href="https://sign-language-detection.vercel.app/"
+                        <a class=" menu__a nav-link mr-20 cl-darkblue" target="_blank" href="https://viesign.vercel.app/"
                             class="communicate">Communicate</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="box_main">
-        <div class="box_top ta-center">
-            <div class="box_top_text ta-center">
-                <h2> Học cùng bộ Flashcard </h2>
-                <button class="button_learn_intro cl-white"> <a href="/flashcard">Học ngay</button></a>
+    <div class="main_test">
+        <div class="start_btn"><button>Xin chào bạn!</button></div>
+        <div class="info_box">
+            <div class="info-title"><span>Chủ đề đầu tiên: Cách thể hiện cảm xúc của bạn</span></div>
+            <div class="info-list">
+                <!-- <div class="info">1. Một khi đã chọn câu đáp án, bạn không thể trả lời lại</div>
+                <div class="info">2. Bạn không thể thoát khỏi Quiz khi đang chơi</div>
+                <div class="info">3. Bạn sẽ được nhận điểm dựa trên số câu trả lời đúng</div> -->
+            </div>
+            <div class="buttons">
+                <button class="quit">Thoát</button>
+                <button class="restart">Tiếp</button>
             </div>
         </div>
-        <div class="box_bottom ta-center ta-center">
-            <div class="box_bottom_text ta-center">
-                <h2> Trắc nghiệm kiến thức vừa học </h2>
-                <button class="button_learn_intro cl-white"> <a href="/test">Thi ngay</button></a>
+        <div class="quiz_box">
+            <header>
+                <div class="title">VieSign Test</div>
+            </header>
+            <section>
+                <div class="que_text">
+                </div>
+                <div class="que_picture">
+                </div>
+                <div class="option_list">
+                </div>
+            </section>
+            <div class="test_footer">
+                <div class="total_que">
+                </div>
+                <!-- <button class="next_btn">Tiếp</button> -->
+            </div>
+            <div class="button">
+                <button class="next_btn" id="next-btn">Tiếp</button>
+
+            </div>
+            <!-- <button class="next_btn">Tiếp</button> -->
+
+        </div>
+        <!-- Result Box -->
+        <div class="result_box">
+            <div class="icon">
+                <i class="fas fa-crown"></i>
+            </div>
+            <div class="complete_text">Bạn đã hoàn thành Quiz</div>
+            <div class="score_text">
+            </div>
+            <div class="buttons">
+                <button class="restart">Làm lại</button>
+                <button class="quit">Thoát</button>
             </div>
         </div>
     </div>
-    <footer class="footer" >
+
+    <!-- <footer class="footer" >
         <div>
             <div class="row">
                 <div class="col-sm-5 col-md-6">
@@ -73,7 +116,7 @@
                 <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0" id="formcontact">
                     <script>
                         function submitForm() {
-                            return confirm('Sent !!!');
+                            return confirm('Đã gửi !!!');
                         }
                     </script>
                     <form onsubmit="return submitForm(this);">
@@ -91,9 +134,16 @@
             </div>
         </div>
        
-    </footer>
-    <script src="{{url_for('static', filename='vendor/bootstrap5min.js')}}"></script>
+    </footer> -->
 
+    <script src="../js/ques.js"></script>
+    <script src="../js/test.js"></script>
+    <!-- <script src="{{url_for('static', filename='js/ques.js')}}"></script>
+    <script src="{{url_for('static', filename='js/test.js')}}"></script> -->
+    <script src="../vendor/bootstrap5min.js"></script>
+
+
+    </script>
 </body>
 
 </html>
