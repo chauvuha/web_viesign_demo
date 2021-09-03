@@ -116,7 +116,7 @@ function optionSelected(answer) {
     let correcAns = questions[que_count].answer;
     const allOptions = option_list.children.length;
 
-if (correcAns.includes(userAns)) {
+if (correcAns == userAns) {
         if (option_list.innerHTML.indexOf("understand") !== -1) {
             userScore += 2.5;
         } else {
