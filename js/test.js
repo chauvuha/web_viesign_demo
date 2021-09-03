@@ -111,12 +111,12 @@ let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 function optionSelected(answer) {
     clearInterval(counter);
     clearInterval(counterLine);
-    let userAns = answer.innerText;
+    let userAns = answer.innerHTML;
 
     let correcAns = questions[que_count].answer;
     const allOptions = option_list.children.length;
 
-if (correcAns == userAns) {
+if (userAns.includes(correcAns)) {
         if (option_list.innerHTML.indexOf("understand") !== -1) {
             userScore += 2.5;
         } else {
@@ -131,7 +131,9 @@ if (correcAns == userAns) {
         answer.insertAdjacentHTML("beforeend", crossIconTag);
         console.log("Wrong Answer");
         for (i = 0; i < allOptions; i++) {
-            if (option_list.children[i] == correcAns) {
+            // if (option_list.children[i] == correcAns) {
+                if (userAns.includes(option_list.children[i])) {
+
                 option_list.children[i].setAttribute("class", "option correct");
                 option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag);
                 console.log("Auto selected correct answer.");
