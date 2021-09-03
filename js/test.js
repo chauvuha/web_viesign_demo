@@ -152,18 +152,18 @@ function showResult() {
     const scoreText = result_box.querySelector(".score_text");
     if (userScore > 60) {
         // let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
-        let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + 100 + ' điểm </p></span>';
+        let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + 75 + ' điểm </p></span>';
         scoreText.innerHTML = scoreTag;
     }
     else if (userScore > 50 && userScore < 60) {
         // let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
-        let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + 100 + ' điểm </p></span>';
+        let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + 75 + ' điểm </p></span>';
 
         scoreText.innerHTML = scoreTag;
     }
     else {
         // let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
-        let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + 100 + ' điểm </p></span>';
+        let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + 75 + ' điểm </p></span>';
 
         scoreText.innerHTML = scoreTag;
     }
