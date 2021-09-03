@@ -69,19 +69,31 @@ function showQuetions(index) {
 
     let que_tag = '<span>' + questions[index].numb + ". " + questions[index].question + '</span>';
     let que_pic = `<video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
-    <source src="video1.mp4" type="video/mp4">
-    <source src="video1.ogg" type="video/ogg">
+    <source src=${questions[index].source} type="video/mp4">
+    <source src=${questions[index].source} type="video/ogg">
     Your browser does not support the video tag.
   </video>`;
     console.log('hello')
     console.log(que_pic)
     let option_tag = '';
-    if (questions[index].img == 'topright') {
+    if (questions[index].img == 'understand') {
         option_tag = '<div class="option understand"><span>' + questions[index].options[0] + '</span></div>';
-    } else {
+    } else if (questions[index].img == 'type1'){
         option_tag = '<div class="option"><span>' + questions[index].options[0] + '</span></div>'
             + '<div class="option"><span>' + questions[index].options[1] + '</span></div>'
-    };
+    } else if (questions[index].img == 'type2') {
+        que_pic = "";
+        option_tag = `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
+        <source src=${questions[index].options[0]} type="video/mp4">
+        <source src=${questions[index].options[0]} type="video/ogg">
+        Your browser does not support the video tag.
+      </video></span></div>`
+        + `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
+        <source src=${questions[index].options[1]} type="video/mp4">
+        <source src=${questions[index].options[1]} type="video/ogg">
+        Your browser does not support the video tag.
+      </video></span></div>`
+    }
     // + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
     // + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
     // + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
@@ -99,11 +111,12 @@ let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 function optionSelected(answer) {
     clearInterval(counter);
     clearInterval(counterLine);
-    let userAns = answer.textContent;
+    let userAns = answer.innerText;
+
     let correcAns = questions[que_count].answer;
     const allOptions = option_list.children.length;
 
-    if (userAns == correcAns) {
+if (correcAns.includes(userAns)) {
         if (option_list.innerHTML.indexOf("understand") !== -1) {
             userScore += 2.5;
         } else {
@@ -135,20 +148,20 @@ function showResult() {
     quiz_box.classList.remove("activeQuiz");
     result_box.classList.add("activeResult");
     const scoreText = result_box.querySelector(".score_text");
-    if (userScore > 3) {
+    if (userScore > 60) {
         // let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
-        let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + 50 + ' điểm </p></span>';
+        let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + 100 + ' điểm </p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else if (userScore > 1) {
+    else if (userScore > 50 && userScore < 60) {
         // let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
-        let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + 50 + ' điểm </p></span>';
+        let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + 100 + ' điểm </p></span>';
 
         scoreText.innerHTML = scoreTag;
     }
     else {
         // let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
-        let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + 50 + ' điểm </p></span>';
+        let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + 100 + ' điểm </p></span>';
 
         scoreText.innerHTML = scoreTag;
     }
