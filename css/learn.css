@@ -82,3 +82,8 @@
     width: 80%;
     height: 50px;
 }
+
+.level_active {
+    background-color: #ffdcf6;
+    color: #FDCCBF !important;
+}
