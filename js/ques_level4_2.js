@@ -116,7 +116,7 @@ let questions = [
     answer: "Tức giận",
     source: "../videos/[Đ]Khongtoikhongcamthaynhuvay.mp4",
     options: [
-      "Không,tôi không cảm thấy như vậy",
+      "Không, tôi không cảm thấy như vậy",
       "Không, tôi đang tức giận",
     ]
   },

@@ -113,7 +113,7 @@ let questions = [
     numb: 11,
     question: "Đây là ký hiệu chỉ câu phức gì?",
     img: "type1",
-    answer: "Tức giận",
+    answer: "Không,tôi không cảm thấy như vậy",
     source: "../videos/[Đ]Khongtoikhongcamthaynhuvay.mp4",
     options: [
       "Không,tôi không cảm thấy như vậy",

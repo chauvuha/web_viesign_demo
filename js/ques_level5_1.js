@@ -113,21 +113,21 @@ let questions = [
     numb: 11,
     question: "Đây là ký hiệu chỉ câu đơn gì?",
     img: "type1",
-    answer: "Có",
+    answer: "Có, tôi đang cảm thấy như vậy",
     source: "../videos/[Đ]Cotoidangcamthaynhuvay.mp4",
     options: [
       "Tôi cũng vậy",
-      "Có",
+      "Có, tôi đang cảm thấy như vậy",
     ]
   },
   {
     numb: 12,
     question: "Đây là ký hiệu chỉ câu ghép gì?",
     img: "type1",
-    answer: "Tức giận",
+    answer: "Không, tôi không cảm thấy như vậy",
     source: "../videos/[Đ]Khongtoikhongcamthaynhuvay.mp4",
     options: [
-      "Không,tôi không cảm thấy như vậy",
+      "Không, tôi không cảm thấy như vậy",
       "Không, tôi đang tức giận",
     ]
   },
@@ -135,10 +135,10 @@ let questions = [
     numb: 13,
     question: "Đây là ký hiệu chỉ câu ghép gì?",
     img: "type1",
-    answer: "Không,tôi không cảm thấy như vậy",
-    source: "../videos/[Đ]Khongtoikhongcamthaynhuvay.mp4",
+    answer: "Có, tôi đang cảm thấy như vậy",
+    source: "../videos/[Đ]Cotoidangcamthaynhuvay.mp4",
     options: [
-      "Không,tôi không cảm thấy như vậy",
+      "Có, tôi đang cảm thấy như vậy",
       "Không, tôi đang tức giận",
     ]
   },
