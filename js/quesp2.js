@@ -105,7 +105,7 @@ let questions = [
     numb: 11,
     question: "Chọn câu đáp phù hợp cho ký hiệu dưới đây",
     img: "type3",
-    answer: "../videos/không.mp4.mp4",
+    answer: "../videos/[Đ]Khongtoikhongcamthaynhuvay.mp4",
     source: "../videos/Bancodangcamthayvuikhong.mp4",
     options: [
       "../videos/[Đ]Toicungvay.mp4",
@@ -138,8 +138,8 @@ let questions = [
     numb: 14,
     question: "Chọn câu đáp phù hợp cho ký hiệu dưới đây",
     img: "type3",
-    answer: "../videos/tôi cũng vậy.mp4",
-    source: "../videos/Tôi cảm thấy vui.mp4",
+    answer: "../videos/[Đ]Toicungvay.mp4",
+    source: "../videos/Toidangcamthayvui.mp4",
     options: [
       "../videos/[Đ]Toicungvay.mp4",
       "../videos/[Đ]Cotoidangcamthaynhuvay.mp4",
