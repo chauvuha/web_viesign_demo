@@ -78,7 +78,7 @@ function showQuetions(index) {
     let option_tag = '';
     if (questions[index].img == 'understand') {
         option_tag = '<div class="option understand"><span>' + questions[index].options[0] + '</span></div>';
-    } else if (questions[index].img == 'type1'){
+    } else if (questions[index].img == 'type1') {
         option_tag = '<div class="option"><span>' + questions[index].options[0] + '</span></div>'
             + '<div class="option"><span>' + questions[index].options[1] + '</span></div>'
     } else if (questions[index].img == 'type2') {
@@ -88,11 +88,23 @@ function showQuetions(index) {
         <source src=${questions[index].options[0]} type="video/ogg">
         Your browser does not support the video tag.
       </video></span></div>`
-        + `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
+            + `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
         <source src=${questions[index].options[1]} type="video/mp4">
         <source src=${questions[index].options[1]} type="video/ogg">
         Your browser does not support the video tag.
       </video></span></div>`
+    } else if (questions[index].img == 'type3') {
+        // que_pic = "";
+        option_tag = `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
+    <source src=${questions[index].options[0]} type="video/mp4">
+    <source src=${questions[index].options[0]} type="video/ogg">
+    Your browser does not support the video tag.
+  </video></span></div>`
+            + `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
+    <source src=${questions[index].options[1]} type="video/mp4">
+    <source src=${questions[index].options[1]} type="video/ogg">
+    Your browser does not support the video tag.
+  </video></span></div>`
     }
     // + '<div class="option"><span>'+ questions[index].options[1] +'</span></div>'
     // + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
@@ -116,7 +128,7 @@ function optionSelected(answer) {
     let correcAns = questions[que_count].answer;
     const allOptions = option_list.children.length;
 
-if (userAns.includes(correcAns)) {
+    if (userAns.includes(correcAns)) {
         if (option_list.innerHTML.indexOf("understand") !== -1) {
             userScore += 2.5;
         } else {
@@ -132,7 +144,7 @@ if (userAns.includes(correcAns)) {
         console.log("Wrong Answer");
         for (i = 0; i < allOptions; i++) {
             // if (option_list.children[i] == correcAns) {
-                if (userAns.includes(option_list.children[i])) {
+            if (userAns.includes(option_list.children[i])) {
 
                 option_list.children[i].setAttribute("class", "option correct");
                 option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag);
