@@ -15,7 +15,9 @@ let questions = [
     numb: 2,
     question: "Tôi buồn",
     img: "understand",
-    source: "../videos/phan3/Phần_3_Tôi_buồn.mp4",
+    // source: "../videos/phan3/Phần_3_Tôi_buồn.mp4",
+    source: "../videos/phan3/Phần_3_Tôi_buồn.mp4",
+
     answer: "Đã hiểu",
     options: [
       "Đã hiểu"
