@@ -5,7 +5,7 @@ let questions = [
     img: "understand",
     // source: "../videos/phan3/Phần_3_Chào_bạn_hôm_nay_bạn_cảm_thấy.mp4",
     // source: "../videos/phan2/Phần_2_Ấn_tượng.mp4",
-    source: "../videos/phan3/Phần_3_Chào.mp4",
+    source: "../videos/phan2/Phần_3_Chào.mp4",
     answer: "Đã hiểu",
     options: [
       "Đã hiểu",
