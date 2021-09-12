@@ -1,9 +1,9 @@
 let questions = [
     {
     numb: 1,
-    question: "Bạn đang cảm thấy thế nào?",
+    question: "Chào bạn, hôm nay bạn cảm thấy thế nào?",
     img: "understand",
-    source: "../videos/[Đ]Bandangthaythenao.mp4",
+    source: "../videos/phan3/Phần_3_Chào_bạn_hôm_nay_bạn_cảm_thấy.mp4",
     answer: "Đã hiểu",
     options: [
       "Đã hiểu",
@@ -11,9 +11,9 @@ let questions = [
   },
     {
     numb: 2,
-    question: "Tôi cảm thấy",
+    question: "Tôi buồn",
     img: "understand",
-    source: "../videos/[Đ]Toidangcamthay....mp4",
+    source: "../videos/phan3/Phần_3_Tôi_buồn.mp4",
     answer: "Đã hiểu",
     options: [
       "Đã hiểu"
@@ -21,61 +21,62 @@ let questions = [
   },
     {
     numb: 3,
-    question: "Tôi cảm thấy vui",
+    question: "Tôi khỏe",
     img: "understand",
-    source: "../videos/Toidangcamthayvui.mp4",
+    source: "../videos/phan3/Phần_3_Tôi_khỏe.mp4",
+    answer: "Đã hiểu",
+    options: [
+      "Đã hiểu",
+    ]
+  },
+
+  {
+    numb: 4,
+    question: "Tôi bình thường",
+    img: "understand",
+    source: "../videos/phan3/Phần_3_Tôi_bình_thường.mp4",
     answer: "Đã hiểu",
     options: [
       "Đã hiểu",
     ]
   },
   {
-    numb: 4,
+    numb: 5,
     question: "Chọn câu đáp phù hợp cho ký hiệu dưới đây",
     img: "type3",
-    answer: "../videos/Toidangcamthayvui.mp4",
-    source: "../videos/[Đ]Bandangthaythenao.mp4",
+    answer: "../videos/phan3/Phần_3_Tôi_buồn.mp4",
+    source: "../videos/phan3/Phần_3_Chào_bạn_hôm_nay_bạn_cảm_thấy.mp4",
     options: [
-      "../videos/Toidangcamthayvui.mp4",
-      "../videos/[Đ]Toicungvay.mp4",
-    ]
-  },
-  {
-    numb: 5,
-    question: "Bạn có cảm thấy...?",
-    img: "understand",
-    answer: "Đã hiểu",
-    source: "../videos/[Đ]Bancodangcamthay...khong.mp4",
-    options: [
-      "Đã hiểu"
+      "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
+      "../videos/phan3/Phần_3_Tôi_buồn.mp4",
     ]
   },
   {
     numb: 6,
-    question: "Bạn có cảm thấy vui không?",
+    question: "Bạn buồn à?",
     img: "understand",
     answer: "Đã hiểu",
-    source: "../videos/Bancodangcamthayvuikhong.mp4",
+    source: "../videos/phan3/Phần_3_Bạn_buồn_à.mp4",
     options: [
       "Đã hiểu"
     ]
   },
   {
     numb: 7,
-    question: "Có",
+    question: "Không, tôi vui mà",
     img: "understand",
     answer: "Đã hiểu",
-    source: "../videos/[Đ]Cotoidangcamthaynhuvay.mp4",
+    source: "../videos/phan3/Phần_3_Không_tôi_vui_mà.mp4",
     options: [
       "Đã hiểu"
     ]
   },
   {
     numb: 8,
-    question: "Không",
+    question: "Phải, tôi buồn lắm",
     img: "understand",
     answer: "Đã hiểu",
-    source: "../videos/[Đ]Khongtoikhongcamthaynhuvay.mp4",
+    source: "../videos/phan3/Phần_3_Phải_tôi_buồn_lắm.mp4",
     options: [
       "Đã hiểu"
     ]
@@ -84,65 +85,63 @@ let questions = [
     numb: 9,
     question: "Chọn câu đáp phù hợp cho ký hiệu dưới đây",
     img: "type3",
-    answer: "../videos/[Đ]Cotoidangcamthaynhuvay.mp4",
-    source: "../videos/Bancodangcamthayvuikhong.mp4",
+    answer: "../videos/phan3/Phần_3_Phải_tôi_buồn_lắm.mp4",
+    source: "../videos/phan3/Phần_3_Bạn_buồn_à.mp4",
     options: [
-      "../videos/[Đ]Cotoidangcamthaynhuvay.mp4",
-      "../videos/[Đ]Toicungvay.mp4",
+      "../videos/phan3/Phần_3_Phải_tôi_buồn_lắm.mp4",
+      "../videos/phan3/Phần_3_Tôi_khỏe.mp4",
     ]
   },
   {
     numb: 10,
-    question: "Tôi cũng vậy",
+    question: "Bạn thuộc bài chưa?",
     img: "understand",
     answer: "Đã hiểu",
-    source: "../videos/[Đ]Toicungvay.mp4",
+    source: "../videos/phan3/Phần_3_Bạn_thuộc_bài_chưa.mp4",
     options: [
       "Đã hiểu"
     ]
   },
   {
     numb: 11,
-    question: "Chọn câu đáp phù hợp cho ký hiệu dưới đây",
-    img: "type3",
-    answer: "../videos/[Đ]Khongtoikhongcamthaynhuvay.mp4",
-    source: "../videos/Bancodangcamthayvuikhong.mp4",
+    question: "Tôi lo vì chưa thuộc bài",
+    img: "understand",
+    answer: "Đã hiểu",
+    source: "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
     options: [
-      "../videos/[Đ]Toicungvay.mp4",
-      "../videos/[Đ]Khongtoikhongcamthaynhuvay.mp4",
+      "Đã hiểu"
     ]
   },
   {
     numb: 12,
-    question: "Chọn câu đáp phù hợp cho ký hiệu dưới đây",
-    img: "type3",
-    answer: "../videos/[Đ]Khongtoikhongcamthaynhuvay.mp4",
-    source: "../videos/Bancodangcamthayvuikhong.mp4",
+    question: "Tôi chưa hiểu bài nên học hoài chưa thuộc",
+    img: "understand",
+    answer: "Đã hiểu",
+    source: "../videos/phan3/Phần_3_Tôi_không_hiểu_bài_nên_học_hoài_chưa_thuộc.mp4",
     options: [
-      "../videos/[Đ]Toicungvay.mp4",
-      "../videos/[Đ]Khongtoikhongcamthaynhuvay.mp4",
+      "Đã hiểu"
     ]
   },
   {
     numb: 13,
     question: "Chọn câu đáp phù hợp cho ký hiệu dưới đây",
     img: "type3",
-    answer: "../videos/Toidangcamthayvui.mp4",
-    source: "../videos/[Đ]Bandangthaythenao.mp4",
+    answer: "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
+    source: "../videos/phan3/Phần_3_Bạn_thuộc_bài_chưa.mp4",
     options: [
-      "../videos/[Đ]Cotoidangcamthaynhuvay.mp4",
-      "../videos/Toidangcamthayvui.mp4",
+      "../videos/phan3/Phần_3_Phải_tôi_buồn_lắm.mp4",
+      "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
     ]
   },
   {
     numb: 14,
     question: "Chọn câu đáp phù hợp cho ký hiệu dưới đây",
     img: "type3",
-    answer: "../videos/[Đ]Toicungvay.mp4",
-    source: "../videos/Toidangcamthayvui.mp4",
+    answer: "../videos/phan3/Phần_3_Tôi_khỏe.mp4",
+    source: "../videos/phan3/Phần_3_Chào_bạn_hôm_nay_bạn_cảm_thấy.mp4",
     options: [
-      "../videos/[Đ]Toicungvay.mp4",
-      "../videos/[Đ]Cotoidangcamthaynhuvay.mp4",
+      "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
+      "../videos/phan3/Phần_3_Tôi_khỏe.mp4",
     ]
-  },
+  }
 ];
