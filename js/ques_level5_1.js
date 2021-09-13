@@ -149,44 +149,44 @@ let questions = [
     numb: 14,
     question: "Chọn câu đáp phù hợp cho ký hiệu dưới đây",
     img: "type3",
-    answer: "../videos/phan3/Phần_3_Tôi_buồn.mp4",
-    source: "../videos/phan3/Phần_3_Chào_bạn_hôm_nay_bạn_cảm_thấy.mp4",
+    answer: "../videos/phan3/Phần_3_Tôi_buồn.mp4",
+    source: "../videos/phan3/Phần_3_Chào_bạn_hôm_nay_bạn_cảm_thấy.mp4", 
     options: [
-      "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
-      "../videos/phan3/Phần_3_Tôi_buồn.mp4",
+      "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
+      "../videos/phan3/Phần_3_Tôi_buồn.mp4",
     ]
   },
   {
     numb: 15,
     question: "Chọn câu đáp phù hợp cho ký hiệu dưới đây",
     img: "type3",
-    answer: "../videos/phan3/Phần_3_Phải_tôi_buồn_lắm.mp4",
-    source: "../videos/phan3/Phần_3_Bạn_buồn_à.mp4",
+    answer: "../videos/phan3/Phần_3_Phải_tôi_buồn_lắm.mp4", 
+    source: "../videos/phan3/Phần_3_Bạn_buồn_à.mp4",
     options: [
-      "../videos/phan3/Phần_3_Phải_tôi_buồn_lắm.mp4",
-      "../videos/phan3/Phần_3_Tôi_khỏe.mp4",
+      "../videos/phan3/Phần_3_Phải_tôi_buồn_lắm.mp4", 
+      "../videos/phan3/Phần_3_Tôi_khỏe.mp4",
     ]
   },
   {
     numb: 16,
     question: "Chọn câu đáp phù hợp cho ký hiệu dưới đây",
     img: "type3",
-    answer: "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
-    source: "../videos/phan3/Phần_3_Bạn_thuộc_bài_chưa.mp4",
+    answer: "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
+    source: "../videos/phan3/Phần_3_Bạn_thuộc_bài_chưa.mp4",
     options: [
-      "../videos/phan3/Phần_3_Phải_tôi_buồn_lắm.mp4",
-      "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
+      "../videos/phan3/Phần_3_Phải_tôi_buồn_lắm.mp4", 
+      "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
     ]
   },
   {
     numb: 17,
     question: "Chọn câu đáp phù hợp cho ký hiệu dưới đây",
     img: "type3",
-    answer: "../videos/phan3/Phần_3_Tôi_bình_thường.mp4",
-    source: "../videos/phan3/Phần_3_Chào_bạn_hôm_nay_bạn_cảm_thấy.mp4",
+    answer: "../videos/phan3/Phần_3_Tôi_bình_thường.mp4",
+    source: "../videos/phan3/Phần_3_Chào_bạn_hôm_nay_bạn_cảm_thấy.mp4", 
     options: [
-      "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
-      "../videos/phan3/Phần_3_Tôi_bình_thường.mp4",
+      "../videos/phan3/Phần_3_Tôi_lo_vì_chưa_thuộc_bài.mp4",
+      "../videos/phan3/Phần_3_Tôi_bình_thường.mp4",
     ]
   },
 ];
