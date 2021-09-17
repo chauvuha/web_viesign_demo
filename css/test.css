@@ -242,7 +242,7 @@ section .option_list .option .icon{
 .button button {
     position:absolute;
     right: 30px;
-    bottom: -150px;
+    bottom: -90px;
     height: 40px;
     padding: 0 13px;
     font-size: 18px;
@@ -384,7 +384,7 @@ section .option_list .option .icon{
     }
 
     .button button { 
-        bottom: -240px;
+        bottom: -170px;
     }
 
 
