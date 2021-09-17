@@ -152,6 +152,7 @@ function showQuetions(index) {
     // + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
     // + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
     que_text.innerHTML = que_tag;
+    console.log("try");
     que_picture.innerHTML = que_pic;
     option_list.innerHTML = option_tag;
 
