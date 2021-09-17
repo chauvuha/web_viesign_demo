@@ -61,7 +61,7 @@ function createArrayOfNumber(start, end) {
 }
 let numbersArray = createArrayOfNumber(1, 14);
 //close Random fuc()
-
+console.log(numbersArray)
 const next_btn = document.querySelector(".next_btn");
 const bottom_ques_counter = document.querySelector(".test_footer .total_que");
 next_btn.onclick = () => {
@@ -94,36 +94,57 @@ function showQuetions(index) {
     <source src=${questions[index].source} type="video/ogg">
     Your browser does not support the video tag.
   </video>`;
-    console.log('hello')
     console.log(que_pic)
+
+    //switch multiple choice answers
     let option_tag = '';
+    let optionsNumber = questions[index].options.length;
+    let optionNumberArr = [];
+
+    for (let i = 0; i < optionsNumber; i++) {
+        optionNumberArr.push(i);
+    }
+    console.log(optionNumberArr)
+
+    let optionPositionFirst = Math.floor(Math.random() * optionsNumber);
+    let optionPositionSecondArr = [];
+    for (i=0; i  < optionsNumber; i ++) {
+        if (i!=optionPositionFirst) {
+            optionPositionSecondArr.push(i);
+        }
+    }
+
+    console.log(optionPositionFirst)
+    let optionPositionSecond = optionPositionSecondArr[0];
+    console.log(optionPositionSecond)
+    
     if (questions[index].img == 'understand') {
         option_tag = '<div class="option understand"><span>' + questions[index].options[0] + '</span></div>';
     } else if (questions[index].img == 'type1') {
-        option_tag = '<div class="option"><span>' + questions[index].options[0] + '</span></div>'
-            + '<div class="option"><span>' + questions[index].options[1] + '</span></div>'
+        option_tag = '<div class="option"><span>' + questions[index].options[optionPositionFirst] + '</span></div>'
+            + '<div class="option"><span>' + questions[index].options[optionPositionSecond] + '</span></div>'
     } else if (questions[index].img == 'type2') {
         que_pic = "";
         option_tag = `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
-        <source src=${questions[index].options[0]} type="video/mp4">
-        <source src=${questions[index].options[0]} type="video/ogg">
+        <source src=${questions[index].options[optionPositionFirst]} type="video/mp4">
+        <source src=${questions[index].options[optionPositionFirst]} type="video/ogg">
         Your browser does not support the video tag.
       </video></span></div>`
             + `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
-        <source src=${questions[index].options[1]} type="video/mp4">
-        <source src=${questions[index].options[1]} type="video/ogg">
+        <source src=${questions[index].options[optionPositionSecond]} type="video/mp4">
+        <source src=${questions[index].options[optionPositionSecond]} type="video/ogg">
         Your browser does not support the video tag.
       </video></span></div>`
     } else if (questions[index].img == 'type3') {
         // que_pic = "";
         option_tag = `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
-    <source src=${questions[index].options[0]} type="video/mp4">
-    <source src=${questions[index].options[0]} type="video/ogg">
+    <source src=${questions[index].options[optionPositionFirst]} type="video/mp4">
+    <source src=${questions[index].options[optionPositionFirst]} type="video/ogg">
     Your browser does not support the video tag.
   </video></span></div>`
             + `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
-    <source src=${questions[index].options[1]} type="video/mp4">
-    <source src=${questions[index].options[1]} type="video/ogg">
+    <source src=${questions[index].options[optionPositionSecond]} type="video/mp4">
+    <source src=${questions[index].options[optionPositionSecond]} type="video/ogg">
     Your browser does not support the video tag.
   </video></span></div>`
     }
