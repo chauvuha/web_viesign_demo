@@ -84,7 +84,7 @@ let questions = [
     question: "Đây là ký hiệu gì?",
     img: "type1",
     answer: "Lo lắng",
-    source: "../videos/phan2/Phần_2_Lo_lắng.mp4",
+    source: "../videos/phan1/Phần_1_Lo_lắng.mp4",
     options: [
       "Lo lắng",
       "Bất ngờ",

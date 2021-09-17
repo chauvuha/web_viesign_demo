@@ -6,6 +6,9 @@ const quiz_box = document.querySelector(".quiz_box");
 const result_box = document.querySelector(".result_box");
 const option_list = document.querySelector(".option_list");
 
+let path = window.location.pathname;
+let page = path.split("/").pop();
+console.log( page ); 
 
 
 start_btn.onclick = () => {
@@ -83,24 +86,24 @@ function showQuetions(index) {
             + '<div class="option"><span>' + questions[index].options[1] + '</span></div>'
     } else if (questions[index].img == 'type2') {
         que_pic = "";
-        option_tag = `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
+        option_tag = `<div class="option option_video"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
         <source src=${questions[index].options[0]} type="video/mp4">
         <source src=${questions[index].options[0]} type="video/ogg">
         Your browser does not support the video tag.
       </video></span></div>`
-            + `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
+            + `<div class="option option_video"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
         <source src=${questions[index].options[1]} type="video/mp4">
         <source src=${questions[index].options[1]} type="video/ogg">
         Your browser does not support the video tag.
       </video></span></div>`
     } else if (questions[index].img == 'type3') {
         // que_pic = "";
-        option_tag = `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
+        option_tag = `<div class="option option_video"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
     <source src=${questions[index].options[0]} type="video/mp4">
     <source src=${questions[index].options[0]} type="video/ogg">
     Your browser does not support the video tag.
   </video></span></div>`
-            + `<div class="option"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
+            + `<div class="option option_video"><span><video width="320" height="240"  muted autoplay loop disablepictureinpicture playsinline>
     <source src=${questions[index].options[1]} type="video/mp4">
     <source src=${questions[index].options[1]} type="video/ogg">
     Your browser does not support the video tag.
@@ -159,27 +162,67 @@ function optionSelected(answer) {
     next_btn.classList.add("show");
 }
 
+
 function showResult() {
     info_box.classList.remove("activeInfo");
     quiz_box.classList.remove("activeQuiz");
     result_box.classList.add("activeResult");
     const scoreText = result_box.querySelector(".score_text");
-    if (userScore > 60) {
-        // let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
-        let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + 100 + ' điểm </p></span>';
-        scoreText.innerHTML = scoreTag;
-    }
-    else if (userScore > 50 && userScore < 60) {
-        // let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
-        let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + 100 + ' điểm </p></span>';
+    
 
-        scoreText.innerHTML = scoreTag;
-    }
-    else {
-        // let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
-        let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + 100 + ' điểm </p></span>';
-
-        scoreText.innerHTML = scoreTag;
+    if (page == "test.html" || page == "test_level2.html") {
+        if (userScore > 60) {
+            // let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
+            let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + 100 + ' điểm </p></span> <span class="ta-center"> Bạn đã sẵn sàng để chinh phục vòng tiếp theo!</span>';
+            scoreText.innerHTML = scoreTag;
+        }
+        else if (userScore > 50 && userScore < 60 ) {
+            // let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
+            let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + 100 + ' điểm </p></span> <span class="ta-center">Hãy ôn tập lại để đủ điều kiện chinh phục vòng tiếp theo!</span>';
+    
+            scoreText.innerHTML = scoreTag;
+        }
+        else {
+            // let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
+            let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + 100 + ' điểm </p></span> <span class="ta-center">Hãy ôn tập lại để đủ điều kiện chinh phục vòng tiếp theo!</span>';
+    
+            scoreText.innerHTML = scoreTag;
+        }
+    } else if (page == "test_lv3.html" || page == "test_level4_1.html" || page == "test_level4_2.html") {
+        if (userScore > 84) {
+            // let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
+            let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + 140 + ' điểm </p></span> <span class="ta-center"> Bạn đã sẵn sàng để chinh phục vòng tiếp theo!</span>';
+            scoreText.innerHTML = scoreTag;
+        }
+        else if (userScore > 70 && userScore < 84 ) {
+            // let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
+            let scoreTag = '<span> Một chút nữa thôi! Bạn đạt <p>' + userScore + '</p> trên <p>' + 140 + ' điểm </p></span> <span class="ta-center">Hãy ôn tập lại để đủ điều kiện chinh phục vòng tiếp theo!</span>';
+            scoreText.innerHTML = scoreTag;
+        }
+        else {
+            // let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
+            let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + 140 + ' điểm </p></span> <span class="ta-center">Hãy ôn tập lại để đủ điều kiện chinh phục vòng tiếp theo!</span>';
+    
+            scoreText.innerHTML = scoreTag;
+        }
+    } else {
+        if (userScore > 102) {
+            // let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
+            let scoreTag = '<span> và chúc mừng, bạn đạt <p>' + userScore + '</p> trên <p>' + 170 + ' điểm </p></span> <span class="ta-center"> Bạn đã sẵn sàng để chinh phục vòng tiếp theo!</span>';
+            scoreText.innerHTML = scoreTag;
+        }
+        else if (userScore > 85 && userScore < 102 ) {
+            // let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
+            let scoreTag = '<span> tuyệt, bạn đạt <p>' + userScore + '</p> trên <p>' + 170 + ' điểm </p></span> <span class="ta-center">Hãy ôn tập lại để đủ điều kiện chinh phục vòng tiếp theo!</span>';
+    
+            scoreText.innerHTML = scoreTag;
+        }
+        else {
+            // let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + questions.length + ' điểm </p></span>';
+            let scoreTag = '<span> ôi không, bạn đạt <p>' + userScore + '</p> trên <p>' + 170 + ' điểm </p></span> <span class="ta-center">Hãy ôn tập lại để đủ điều kiện chinh phục vòng tiếp theo!</span>';
+    
+            scoreText.innerHTML = scoreTag;
+        }
     }
 }
 
